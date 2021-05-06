@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Landing Page</title>
+    <script
+      src="https://kit.fontawesome.com/dadbace405.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="gallery/netflix.png" alt="logo" /></a>
+      <ul class="navigation">
+        <li><a href="#">home</a></li>
+        <li><a href="#">TV shows</a></li>
+        <li><a href="#">Movies</a></li>
+        <li><a href="#">latest</a></li>
+        <li><a href="#">my list</a></li>
+      </ul>
+      <div class="search">
+        <input type="text" placeholder="search" />
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </div>
+    </header>
+    <div class="banner">
+      <img class="bg" src="gallery/mulan_bg.jpg" alt="background" />
+      <div class="content">
+        <div class="content_wrap">
+          <div class="img_container">
+            <img src="gallery/content_image.png" class="title" alt="title" />
+            <h4>
+              <span>2020</span>
+              <span><i>12+</i></span>
+              <span>1h 55min</span>
+              <span>Action</span>
+            </h4>
+          </div>
+
+          <p>
+            mulan the mumu girl that does not want to do what her mates are
+            doing. she wan wan go fight. fine girl wey dey form porche bt las
+            las. Say the barni go well no be chise. Na spec she be i no go lie.
+            This wey i dey type self na na jst trash.. make e no b like say we
+            no get content. I dey feel my self gan.
+          </p>
+        </div>
+        <div class="buttons">
+          <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Play</a>
+          <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
+        </div>
+        <a onclick="toggleVideo();" class="play">
+          <img src="gallery/logo.png" alt="player" />
+          <p>watch trailer</p>
+        </a>
+      </div>
+      <div class="trailer">
+        <video src="gallery/trailer.mp4" controls="true"></video>
+        <p onclick="toggleVideo();" class="icon">x</p>
+      </div>
+    </div>
+    <script>
+      function toggleVideo() {
+        const trail = document.querySelector(".trailer");
+        const video = document.querySelector("video");
+        trail.classList.toggle("active");
+        video.currentTime = 0;
+        video.pause();
+      }
+    </script>
+  </body>
+</html>
